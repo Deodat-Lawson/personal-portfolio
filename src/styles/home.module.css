@@ -1,31 +1,56 @@
-.portfolioContainer {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #2D1B4E, #000000);
-    background-size: 200% 200%;
-    animation: gradientBG 15s ease infinite;
-    color: white;
-}
-
 .loadingScreen {
     position: fixed;
     inset: 0;
     background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 100;
+    overflow: hidden;
 }
 
-.loadingText {
+.loadingVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.loadingOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(139, 69, 19, 0.7), rgba(255, 165, 0, 0.5));
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.skipButton {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    z-index: 101;
+}
+
+.skipButton:hover {
+    background: rgba(255, 215, 0, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.portfolioContainer {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a0f00, #000000);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
     color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-}
-
-.loadingChar {
-    display: inline-block;
-    animation: bounce 1s infinite;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
 .navContainer {
@@ -33,9 +58,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(8px);
     z-index: 50;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .navContent {
@@ -50,6 +76,10 @@
 .navLogo {
     font-size: 1.25rem;
     font-weight: bold;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .navLinks {
@@ -58,17 +88,30 @@
 }
 
 .navLink {
-    color: white;
+    color: #FFD700;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
+    position: relative;
 }
 
-.navLink:hover {
-    color: #A855F7;
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    transition: all 0.3s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .heroSection {
@@ -78,6 +121,7 @@
     justify-content: center;
     padding: 5rem 1.5rem;
     animation: fadeIn 1s ease-out;
+    background: radial-gradient(circle at center, rgba(255, 165, 0, 0.1) 0%, transparent 70%);
 }
 
 .heroContent {
@@ -89,15 +133,16 @@
     font-size: 3.75rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #A855F7, #EC4899);
+    background: linear-gradient(to right, #FFD700, #FFA500, #FF4500);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
 .heroDescription {
     font-size: 1.25rem;
-    color: #D1D5DB;
+    color: #FFE4B5;
     margin-bottom: 2rem;
 }
 
@@ -113,14 +158,16 @@
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
-    background-color: #A855F7;
-    color: white;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .primaryButton:hover {
-    background-color: #9333EA;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
 .secondaryButton {
@@ -129,18 +176,22 @@
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
-    border: 1px solid #A855F7;
-    color: white;
+    border: 2px solid #FFD700;
+    color: #FFD700;
     text-decoration: none;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .secondaryButton:hover {
-    background-color: #A855F7;
+    background: rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
 .projectsSection {
     padding: 5rem 1.5rem;
+    background: radial-gradient(circle at top, rgba(255, 165, 0, 0.1) 0%, transparent 70%);
 }
 
 .sectionTitle {
@@ -148,6 +199,7 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 3rem;
+    color: #FFD700;
 }
 
 .projectsGrid {
@@ -159,19 +211,22 @@
 }
 
 .projectCard {
-    background: rgba(17, 24, 39, 0.8);
+    background: rgba(25, 25, 25, 0.8);
     border-radius: 0.5rem;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .projectCard:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.3);
 }
 
 .projectImage {
     height: 200px;
-    background: #4C1D95;
+    background: linear-gradient(45deg, #B8860B, #DAA520);
 }
 
 .projectContent {
@@ -182,10 +237,11 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: #FFD700;
 }
 
 .projectDescription {
-    color: #9CA3AF;
+    color: #FFE4B5;
     margin-bottom: 1rem;
 }
 
@@ -195,20 +251,22 @@
 }
 
 .projectLink {
-    color: #A855F7;
+    color: #FFA500;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    transition: all 0.3s ease;
 }
 
 .projectLink:hover {
-    color: #9333EA;
+    color: #FFD700;
+    transform: translateX(5px);
 }
 
 .skillsSection {
     padding: 5rem 1.5rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to bottom, rgba(25, 25, 25, 0.8), rgba(25, 25, 25, 0.4));
 }
 
 .skillsGrid {
@@ -220,20 +278,25 @@
 }
 
 .skillItem {
-    background: rgba(76, 29, 149, 0.5);
+    background: rgba(25, 25, 25, 0.8);
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    color: #FFD700;
 }
 
 .skillItem:hover {
-    background: rgba(76, 29, 149, 0.8);
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 .contactSection {
     padding: 5rem 1.5rem;
     text-align: center;
+    background: radial-gradient(circle at bottom, rgba(255, 165, 0, 0.1) 0%, transparent 70%);
 }
 
 .socialLinks {
@@ -244,19 +307,22 @@
 }
 
 .socialLink {
-    color: #D1D5DB;
-    transition: color 0.3s ease;
+    color: #FFD700;
+    transition: all 0.3s ease;
 }
 
 .socialLink:hover {
-    color: #A855F7;
+    color: #FFA500;
+    transform: translateY(-5px);
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
 }
 
 .footer {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     padding: 1.5rem;
     text-align: center;
-    color: #9CA3AF;
+    color: #FFE4B5;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 @keyframes fadeIn {
@@ -270,15 +336,6 @@
     }
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -288,6 +345,15 @@
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 

@@ -1,35 +1,75 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-import { Code, Briefcase, User, Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Code, Mail } from 'lucide-react';
 import styles from '../styles/home.module.css';
 
 const Portfolio = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [activeSection, setActiveSection] = useState('hero');
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+    const videoRef = useRef(null);
 
     useEffect(() => {
-        setTimeout(() => setIsLoading(false), 3000);
+        // Fallback timer in case video fails to load
+        const fallbackTimer = setTimeout(() => {
+            setIsLoading(false);
+        }, 6000); // 6 seconds maximum wait time
+
+        return () => clearTimeout(fallbackTimer);
     }, []);
 
+    const handleVideoEnd = () => {
+        const videoElement = videoRef.current;
+        if (videoElement) {
+            // Fade out the loading screen when video finishes
+            videoElement.parentElement.classList.add(styles.fadeOut);
+            setTimeout(() => setIsLoading(false), 1000);
+        }
+    };
+
+    const handleVideoLoad = () => {
+        setIsVideoLoaded(true);
+    };
+
+    const skipIntro = () => {
+        const videoElement = videoRef.current;
+        if (videoElement) {
+            // Fade out the loading screen when the user skips
+            videoElement.parentElement.classList.add(styles.fadeOut);
+            setTimeout(() => setIsLoading(false), 1000);
+        }
+    };
+
+    // Show the loading video if still loading
     if (isLoading) {
         return (
             <div className={styles.loadingScreen}>
-                <div className={styles.loadingText}>
-                    {['デ', 'ベ', 'ロ', 'ッ', 'パ', 'ー'].map((char, index) => (
-                        <span
-                            key={index}
-                            className={styles.loadingChar}
-                            style={{ animationDelay: `${index * 0.1}s` }}
-                        >
-              {char}
-            </span>
-                    ))}
-                </div>
+                <div className={styles.loadingOverlay} />
+                <video
+                    ref={videoRef}
+                    className={styles.loadingVideo}
+                    autoPlay        // Automatically start playing
+                    muted           // Required for autoplay in many browsers
+                    playsInline     // Allows inline playback on iOS devices
+                    onEnded={handleVideoEnd}
+                    onLoadedData={handleVideoLoad}
+                >
+                    <source src="/loading-animation.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                {isVideoLoaded && (
+                    <button
+                        className={styles.skipButton}
+                        onClick={skipIntro}
+                    >
+                        Skip Intro
+                    </button>
+                )}
             </div>
         );
     }
 
+    // Portfolio content after loading
     return (
         <div className={styles.portfolioContainer}>
             {/* Navigation */}
@@ -37,9 +77,9 @@ const Portfolio = () => {
                 <div className={styles.navContent}>
                     <div className={styles.navLogo}>DevName.io</div>
                     <div className={styles.navLinks}>
-                        <button onClick={() => setActiveSection('about')} className={styles.navLink}>About</button>
-                        <button onClick={() => setActiveSection('projects')} className={styles.navLink}>Projects</button>
-                        <button onClick={() => setActiveSection('contact')} className={styles.navLink}>Contact</button>
+                        <button className={styles.navLink}>About</button>
+                        <button className={styles.navLink}>Projects</button>
+                        <button className={styles.navLink}>Contact</button>
                     </div>
                 </div>
             </nav>
@@ -47,9 +87,9 @@ const Portfolio = () => {
             {/* Hero Section */}
             <section className={styles.heroSection}>
                 <div className={styles.heroContent}>
-                    <h1 className={styles.heroTitle}>Software Engineer</h1>
+                    <h1 className={styles.heroTitle}>Timothy Lin</h1>
                     <p className={styles.heroDescription}>
-                        Crafting digital experiences with code. Bringing ideas to life through elegant solutions.
+                        A software engineer who has a fascination with emerging technologies and passion for pushing the boundaries of what’s possible. I transform forward-thinking ideas into real-world applications and tackle complex problems—especially those that sit at the intersection of deep tech research and impactful business opportunities.
                     </p>
                     <div className={styles.buttonGroup}>
                         <a href="#projects" className={styles.primaryButton}>
@@ -64,64 +104,7 @@ const Portfolio = () => {
                 </div>
             </section>
 
-            {/* Projects Grid */}
-            <section id="projects" className={styles.projectsSection}>
-                <h2 className={styles.sectionTitle}>Featured Projects</h2>
-                <div className={styles.projectsGrid}>
-                    {[1, 2, 3].map((project) => (
-                        <div key={project} className={styles.projectCard}>
-                            <div className={styles.projectImage}></div>
-                            <div className={styles.projectContent}>
-                                <h3 className={styles.projectTitle}>Project {project}</h3>
-                                <p className={styles.projectDescription}>
-                                    A brief description of the project and the technologies used.
-                                </p>
-                                <div className={styles.projectLinks}>
-                                    <a href="#" className={styles.projectLink}>
-                                        <Github size={16} />
-                                        Code
-                                    </a>
-                                    <a href="#" className={styles.projectLink}>
-                                        <ExternalLink size={16} />
-                                        Demo
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Skills Section */}
-            <section className={styles.skillsSection}>
-                <h2 className={styles.sectionTitle}>Technical Skills</h2>
-                <div className={styles.skillsGrid}>
-                    {[
-                        'JavaScript', 'React', 'Node.js', 'Python',
-                        'TypeScript', 'Next.js', 'SQL', 'AWS'
-                    ].map((skill) => (
-                        <div key={skill} className={styles.skillItem}>
-                            {skill}
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Contact Section */}
-            <section id="contact" className={styles.contactSection}>
-                <h2 className={styles.sectionTitle}>Let's Connect</h2>
-                <div className={styles.socialLinks}>
-                    <a href="#" className={styles.socialLink}>
-                        <Github size={32} />
-                    </a>
-                    <a href="#" className={styles.socialLink}>
-                        <Linkedin size={32} />
-                    </a>
-                    <a href="#" className={styles.socialLink}>
-                        <Mail size={32} />
-                    </a>
-                </div>
-            </section>
+            {/* Add any other sections you have (Projects, Skills, Contact, etc.) */}
 
             {/* Footer */}
             <footer className={styles.footer}>
