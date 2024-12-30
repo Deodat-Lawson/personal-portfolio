@@ -1,0 +1,47 @@
+/* styles/Navbar.module.css */
+
+/* Example custom classes */
+.navbarContainer {
+    background-color: #F9FAFB; /* Tailwind's gray-50 */
+}
+
+.fixedNav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 50;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.navContent {
+    max-width: 72rem; /* equivalent to max-w-6xl from Tailwind */
+    margin: 0 auto;
+    padding: 0 1rem; /* basic horizontal padding */
+    display: flex;
+    justify-content: space-between;
+    height: 4rem; /* equivalent to h-16 */
+    align-items: center;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* equivalent to space-x-4 in Tailwind */
+}
+
+/* Utility classes for text & hover effects */
+.navLink {
+    color: #374151; /* Tailwind gray-700 */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover {
+    color: #111827; /* Tailwind gray-900 */
+}
+
+.brand {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700;   /* font-bold */
+}
