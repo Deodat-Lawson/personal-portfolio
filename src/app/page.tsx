@@ -7,7 +7,7 @@ import styles from '../styles/home.module.css';
 const Portfolio = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-    const videoRef = useRef(null);
+    const videoRef = useRef<HTMLVideoElement | null>(null);
 
     useEffect(() => {
         // Fallback timer in case video fails to load
