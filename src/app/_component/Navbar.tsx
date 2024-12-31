@@ -4,26 +4,22 @@ import styles from "../../styles/Navbar.module.css";
 
 export const Navbar = () => {
     return (
-        <div className={styles.navbarContainer}>
-            {/* Navigation */}
-            <nav className={styles.fixedNav}>
-                <div className={styles.navContent}>
-                    <div className="flex items-center">
-                        <span className={styles.brand}>Your Name</span>
-                    </div>
-                    <div className={styles.navRight}>
-                        <Link href="/#projects" className={styles.navLink}>
-                            Projects
-                        </Link>
-                        <Link href="/#skills" className={styles.navLink}>
-                            Skills
-                        </Link>
-                        <Link href="/#contact" className={styles.navLink}>
-                            Contact
-                        </Link>
-                    </div>
+        <nav className={styles.navContainer}>
+            <div className={styles.navContent}>
+                <div className={styles.navLogo}>Timothy Lin</div>
+                <div className={styles.navLinks}>
+                    <Link href="/">
+                        <button className={styles.navLink}>About</button>
+                    </Link>
+                    <Link href="/projects">
+                        <button className={styles.navLink}>Projects</button>
+                    </Link>
+                    <Link href="/contact">
+                        <button className={styles.navLink}>Contact</button>
+                    </Link>
+
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 };

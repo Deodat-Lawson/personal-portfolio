@@ -1,47 +1,61 @@
-/* styles/Navbar.module.css */
 
-/* Example custom classes */
-.navbarContainer {
-    background-color: #F9FAFB; /* Tailwind's gray-50 */
-}
-
-.fixedNav {
+.navContainer {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
     z-index: 50;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .navContent {
-    max-width: 72rem; /* equivalent to max-w-6xl from Tailwind */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem; /* basic horizontal padding */
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
-    height: 4rem; /* equivalent to h-16 */
     align-items: center;
 }
 
-.navRight {
+.navLogo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.navLinks {
     display: flex;
-    align-items: center;
-    gap: 1rem; /* equivalent to space-x-4 in Tailwind */
+    gap: 1.5rem;
 }
 
-/* Utility classes for text & hover effects */
 .navLink {
-    color: #374151; /* Tailwind gray-700 */
+    color: #FFD700;
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
 }
 
-.navLink:hover {
-    color: #111827; /* Tailwind gray-900 */
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    transition: all 0.3s ease;
 }
 
-.brand {
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 700;   /* font-bold */
+.navLink:hover::after {
+    width: 100%;
+    left: 0;
 }
