@@ -150,7 +150,7 @@ export default function Portfolio() {
 
             {/* Contact Section */}
             <section id="contact" className={styles.contactSection}>
-                <h2 className={styles.sectionTitle}>Let's Connect</h2>
+                <h2 className={styles.sectionTitle}>Let&#39;s Connect</h2>
                 <div className={styles.socialLinks}>
                     <a
                         href="https://github.com/Deodat-Lawson"

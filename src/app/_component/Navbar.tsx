@@ -8,7 +8,7 @@ export const Navbar = () => {
             <div className={styles.navContent}>
                 <div className={styles.navLogo}>Timothy Lin</div>
                 <div className={styles.navLinks}>
-                    <Link href="/">
+                    <Link href="/home">
                         <button className={styles.navLink}>About</button>
                     </Link>
                     <Link href="/projects">
