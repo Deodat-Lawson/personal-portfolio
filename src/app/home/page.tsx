@@ -9,16 +9,16 @@ const projectsData = [
     {
         title: "AI Integrated Finance Tracker",
         description:
-            "A smart tool that leverages AI to monitor, analyze, and optimize your financial activities...",
+            "A smart tool that leverages AI to monitor, analyze, and optimize your financial activities, providing personalized insights and real-time updates to keep your finances on track. ",
         imageUrl: "/images/ai-chatbot.png",
-        githubUrl: "https://github.com/your-username/ai-chatbot",
-        githubUrl2: "",
-        demoUrl: "https://your-demo-link.com",
+        githubUrl: "https://github.com/Deodat-Lawson/personalFinanceTrackFrontend",
+        githubUrl2: "https://github.com/Deodat-Lawson/personalFinanceTrackBackend",
+        demoUrl: "",
     },
     {
         title: "JHU Course Vote Social Media Platform",
         description:
-            "A live rating/social media platform to talk about Courses in our school...",
+            "A live rating/social platform for course discussions can greatly benefit your school community by making course selection more transparent, fostering meaningful peer interactions, and improving overall academic experiences.",
         imageUrl: "/images/realtime-dashboard.png",
         githubUrl: "https://github.com/Deodat-Lawson/click_to_punch_nlp",
         githubUrl2: "",
@@ -26,7 +26,7 @@ const projectsData = [
     },
     {
         title: "Rome",
-        description: "",
+        description: "Rome is an AI-powered platform that transforms brand identities into personalized, interactive video games, enabling deeper audience engagement and memorable digital experiences. By leveraging generative AI, it seamlessly integrates a brand’s essence into dynamic gameplay, offering creators, influencers, and companies a unique way to expand their digital presence and connect with their audience.",
         imageUrl: "/images/ecommerce-platform.png",
         githubUrl: "https://github.com/ho-tony/rome-fe",
         githubUrl2: "https://github.com/klxu03/rome",
@@ -43,6 +43,7 @@ export default function Portfolio() {
             <section className={styles.heroSection}>
                 <div className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>Timothy Lin</h1>
+                    <p className={styles.heroSubtitle}>3rd Yr @ Johns Hopkins University</p>
                     <p className={styles.heroDescription}>
                         A software engineer who has a fascination with emerging
                         technologies and passion for pushing the boundaries of what’s
@@ -119,8 +120,8 @@ export default function Portfolio() {
                     ))}
                 </div>
 
-                <div className={styles.buttonGroup}>
-                    <a href="#projects" className={styles.primaryButton}>
+                <div className={styles.buttonGroup} style={{ marginTop: '2rem' }}>
+                    <a href="/projects" className={styles.primaryButton}>
                         <Code className={styles.buttonIcon} />
                         More Projects
                     </a>
@@ -130,22 +131,84 @@ export default function Portfolio() {
             {/* Skills Section */}
             <section className={styles.skillsSection}>
                 <h2 className={styles.sectionTitle}>Technical Skills</h2>
+                <h3 className={styles.sectionSubtitle}>Programming Languages</h3>
                 <div className={styles.skillsGrid}>
                     {[
+                        "Java",
                         "JavaScript",
-                        "React",
-                        "Node.js",
-                        "Python",
-                        "TypeScript",
-                        "Next.js",
                         "SQL",
-                        "AWS",
+                        "Python",
+                        "C",
+                        "C++",
+                        "Bash",
+                        "React",
+                        "TypeScript",
                     ].map((skill) => (
                         <div key={skill} className={styles.skillItem}>
                             {skill}
                         </div>
                     ))}
                 </div>
+
+                <h3 className={styles.sectionSubtitle}>Framework & Technologies:</h3>
+                <div className={styles.skillsGrid}>
+                    {[
+                        "Spring Boot",
+                        "Next.js",
+                        "Django",
+                        "React",
+                        "Express.js",
+                        "MySQL",
+                        "Postgres SQL",
+                        "Kafka",
+                        "Redis",
+                        "Node.js",
+                        "AWS",
+                        "Azure",
+                        "Google Cloud",
+                        "Numpy",
+                        "Pytorch",
+                        "Scikit-learn",
+                        "Flask",
+                        "Tensorflow",
+                        "Pandas"
+                    ].map((skill) => (
+                        <div key={skill} className={styles.skillItem}>
+                            {skill}
+                        </div>
+                    ))}
+                </div>
+
+
+                <h3 className={styles.sectionSubtitle}>Development Tools:</h3>
+                <div className={styles.skillsGrid}>
+                    {[
+                        "Git",
+                        "GitHub",
+                        "Unix",
+                        "Vim",
+                        "Vercel",
+                        "NPM",
+                        "PNPM",
+                        "Jupyter Notebook",
+                        "Google Collab",
+                        "Intellij IDEA",
+                        "Webstorm",
+                        "Pytorch",
+                        "Clion",
+                        "Maven",
+                        "Postman",
+                        "Jenkins",
+                        "JUnit",
+                        "TestNG",
+                    ].map((skill) => (
+                        <div key={skill} className={styles.skillItem}>
+                            {skill}
+                        </div>
+                    ))}
+                </div>
+
+
             </section>
 
             {/* Contact Section */}

@@ -2,7 +2,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { Github, ExternalLink, Cpu, Code, Layout } from 'lucide-react';
+import {Github, ExternalLink, Cpu, Code, Layout, Phone, Smartphone} from 'lucide-react';
 import styles from '../../styles/projects.module.css';
 import {Navbar} from "~/app/_component/Navbar";
 
@@ -12,28 +12,62 @@ interface Project {
     description: string;
     technologies: string[];
     githubUrl?: string;
+    githubUrl2?: string;
     liveUrl?: string;
     imageUrl: string;
-    category: 'fullstack' | 'ml' | 'other';
+    category: 'fullstack' | 'ml' | 'mobile' | 'other';
 }
+
+
+
+const projectsData = [
+    {
+        title: "AI Integrated Finance Tracker",
+        description:
+            "A smart tool that leverages AI to monitor, analyze, and optimize your financial activities...",
+        imageUrl: "/images/ai-chatbot.png",
+        githubUrl: "https://github.com/Deodat-Lawson/personalFinanceTrackFrontend",
+        githubUrl2: "https://github.com/Deodat-Lawson/personalFinanceTrackBackend",
+        demoUrl: "",
+    },
+    {
+        title: "JHU Course Vote Social Media Platform",
+        description:
+            "A live rating/social platform for course discussions can greatly benefit your school community by making course selection more transparent, fostering meaningful peer interactions, and improving overall academic experiences.",
+        imageUrl: "/images/realtime-dashboard.png",
+        githubUrl: "https://github.com/Deodat-Lawson/click_to_punch_nlp",
+        githubUrl2: "",
+        demoUrl: "https://www.jhucoursevote.online/",
+    },
+    {
+        title: "Rome",
+        description: "Rome is an AI-powered platform that transforms brand identities into personalized, interactive video games, enabling deeper audience engagement and memorable digital experiences. By leveraging generative AI, it seamlessly integrates a brand’s essence into dynamic gameplay, offering creators, influencers, and companies a unique way to expand their digital presence and connect with their audience.",
+        imageUrl: "/images/ecommerce-platform.png",
+        githubUrl: "https://github.com/ho-tony/rome-fe",
+        githubUrl2: "https://github.com/klxu03/rome",
+        demoUrl: "https://devpost.com/software/rome",
+    },
+];
 
 const projects: Project[] = [
     {
         id: '1',
-        title: 'E-Commerce Platform',
-        description: 'A modern e-commerce platform built with Next.js and Stripe integration. Features include user authentication, product management, and real-time payment processing.',
-        technologies: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL'],
-        githubUrl: 'https://github.com/yourusername/ecommerce',
-        liveUrl: 'https://yourapp.com',
+        title: 'JHU Course Vote Social Media Platform',
+        description: "A live rating/social platform for course discussions can greatly benefit your school community by making course selection more transparent, fostering meaningful peer interactions, and improving overall academic experiences.",
+        technologies: ['Next.js', 'TypeScript', 'Drizzle', 'PostgreSQL', 'Clerk'],
+        githubUrl: 'https://github.com/Deodat-Lawson/click_to_punch_nlp',
+        githubUrl2: '',
+        liveUrl: 'https://www.jhucoursevote.online/',
         imageUrl: '/projects/ecommerce.jpg',
         category: 'fullstack'
     },
     {
         id: '2',
-        title: 'AI Image Generator',
+        title: 'AI Integrated Finance Tracker',
         description: 'A machine learning model that generates artistic images from text descriptions using stable diffusion.',
         technologies: ['Python', 'PyTorch', 'FastAPI', 'React'],
-        githubUrl: 'https://github.com/yourusername/ai-image-gen',
+        githubUrl: "https://github.com/Deodat-Lawson/personalFinanceTrackFrontend",
+        githubUrl2: "https://github.com/Deodat-Lawson/personalFinanceTrackBackend",
         imageUrl: '/projects/ai-image.jpg',
         category: 'ml'
     },
@@ -47,11 +81,42 @@ const projects: Project[] = [
         imageUrl: '/projects/portfolio.jpg',
         category: 'other'
     },
+    {
+        id: '4',
+        title: 'LifePal',
+        description: 'Personal portfolio website built with modern technologies and smooth animations.',
+        technologies: ['Next.js', 'TypeScript', 'Framer Motion'],
+        githubUrl: 'https://github.com/yourusername/portfolio',
+        liveUrl: 'https://yourportfolio.com',
+        imageUrl: '/projects/portfolio.jpg',
+        category: 'mobile'
+    },
+    {
+        id: '5',
+        title: 'BenGenius',
+        description: 'Personal portfolio website built with modern technologies and smooth animations.',
+        technologies: ['Next.js', 'TypeScript', 'Framer Motion'],
+        githubUrl: 'https://github.com/yourusername/portfolio',
+        liveUrl: 'https://yourportfolio.com',
+        imageUrl: '/projects/portfolio.jpg',
+        category: 'ml',
+    },
+    {
+        id: '6',
+        title: 'NORA AI',
+        description: 'Personal portfolio website built with modern technologies and smooth animations.',
+        technologies: ['Next.js', 'PostgresSQL', 'Clerk',  'SAMMO Prompting', 'Chain Of Thought Prompting'],
+        githubUrl: 'https://github.com/Deodat-Lawson/the_most_promising_future_frontend',
+        githubUrl2: 'https://github.com/Deodat-Lawson/the_most_promising_future_backend',
+        liveUrl: '',
+        imageUrl: '/projects/portfolio.jpg',
+        category: 'ml',
+    },
     // Add more projects here...
 ];
 
 const ProjectsPage = () => {
-    const [activeFilter, setActiveFilter] = useState<'all' | 'fullstack' | 'ml' | 'other'>('all');
+    const [activeFilter, setActiveFilter] = useState<'all' | 'fullstack' | 'ml' |'mobile'| 'other'>('all');
 
     const filteredProjects = projects.filter(project =>
         activeFilter === 'all' ? true : project.category === activeFilter
@@ -63,6 +128,8 @@ const ProjectsPage = () => {
                 return <Layout className={styles.filterIcon} />;
             case 'ml':
                 return <Cpu className={styles.filterIcon} />;
+            case 'mobile':
+                return <Smartphone className={styles.filterIcon} />;
             case 'other':
                 return <Code className={styles.filterIcon} />;
             default:
@@ -112,6 +179,16 @@ const ProjectsPage = () => {
                     </button>
                     <button
                         className={`${styles.filterButton} ${
+                            activeFilter === 'mobile' ? styles.active : ''
+                        }`}
+                        onClick={() => setActiveFilter('mobile')}
+                    >
+                        <Smartphone className={styles.filterIcon} />
+                        Mobile
+                    </button>
+
+                    <button
+                        className={`${styles.filterButton} ${
                             activeFilter === 'other' ? styles.active : ''
                         }`}
                         onClick={() => setActiveFilter('other')}
@@ -149,6 +226,17 @@ const ProjectsPage = () => {
                                     {project.githubUrl && (
                                         <a
                                             href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.projectLink}
+                                        >
+                                            <Github size={20} />
+                                            <span>Code</span>
+                                        </a>
+                                    )}
+                                    {project.githubUrl2 && (
+                                        <a
+                                            href={project.githubUrl2}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={styles.projectLink}
