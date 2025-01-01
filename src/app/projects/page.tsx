@@ -89,8 +89,8 @@ const projects: Project[] = [
     {
         id: '6',
         title: 'NORA AI',
-        description: '',
-        technologies: ['Next.js', 'PostgresSQL', 'Clerk', 'SAMMO Prompting', 'Chain Of Thought Prompting'],
+        description: 'AI university application consultant',
+        technologies: ['Next.js', 'PostgresSQL', 'Clerk', 'SAMMO Prompting', 'Chain Of Thought Prompting', 'ChatGPT API'],
         githubUrl: 'https://github.com/Deodat-Lawson/the_most_promising_future_frontend',
         githubUrl2: 'https://github.com/Deodat-Lawson/the_most_promising_future_backend',
         liveUrl: '',
