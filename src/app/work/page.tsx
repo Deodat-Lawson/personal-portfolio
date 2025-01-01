@@ -17,7 +17,7 @@ const experiences: WorkExperience[] = [
     {
         id: '1',
         company: 'Willis Towers Watson',
-        position: 'Data Engineer Intern',
+        position: 'Health and Benefits Data Engineer Intern',
         location: 'Seattle, WA, USA',
         duration: 'June 2024 - Aug 2024',
         description: [
@@ -27,9 +27,9 @@ const experiences: WorkExperience[] = [
             'Presented in-depth explanations of AI and taught AI integration techniques through live demonstrations, influencing\n' +
             'multiple major projects in the North America region.'
         ],
-        technologies: ['Pandas', 'Excel', 'PostgresSQL'],
+        technologies: ['Pandas', 'Excel VBA', 'PostgresSQL', 'scikit-learn', 'Jupyter Notebook'],
         companyUrl: 'https://www.wtwco.com/en-ca',
-        logo: '/companies/techcorp.png'
+        logo: 'https://utfs.io/f/KSLubuOGoQY2Mfa6QpMSGUXTVvkwH8PJRbmEroyz5InsBguq'
     },
     {
         id: '2',
@@ -48,7 +48,7 @@ const experiences: WorkExperience[] = [
         ],
         technologies: ['Spring Boot', 'PostgreSQL', 'Redis', 'MongoDB', 'AWS'],
         companyUrl: 'https://www.eth-tech.net/',
-        logo: '/companies/startup.png'
+        logo: 'https://utfs.io/f/KSLubuOGoQY2CnQSeWjHkEcFtWzHdeU91aP2BbIivKDZlyM0'
     },
     {
         id: '3',
@@ -61,9 +61,9 @@ const experiences: WorkExperience[] = [
             'Used TensorFlow to optimize a neural network algorithm for the Asia market, saving over 100 hours in testing time.',
             'Worked with cross-functional teams to improve data pipelines and quality, ensuring insights for decision-making.'
         ],
-        technologies: [],
+        technologies: ['Tensorflow', 'scikit-learn', 'Jupyter Notebook', 'Bloomberg Terminal', 'Excel'],
         companyUrl: 'https://www.quamplus.com/en',
-        logo: '../../../public/assets/quam.png'
+        logo: 'https://utfs.io/f/KSLubuOGoQY2Beisf7gL8ECAqmWXPS0Rjg7y1kdYa6cOFIQu'
     },
     {
         id: '4',
@@ -81,9 +81,9 @@ const experiences: WorkExperience[] = [
             'Actively gathered user feedback through surveys and analytics, performing iterative improvements and deploying updates\n' +
             'seamlessly with CI/CD pipelines, enhancing the overall functionality and user satisfaction of the LMS platform.'
         ],
-        technologies: [],
+        technologies: ['Javascript','Flask', 'MySQL', 'scikit-learn', 'Express.js','Google Colab'],
         companyUrl: 'https://www.learningbuddiesnetwork.com',
-        logo: '/companies/solutions.png'
+        logo: 'https://utfs.io/f/KSLubuOGoQY27zQfRLDCPh9nKE7rO421wRlFovAZybVg0asS'
     }
 ];
 
