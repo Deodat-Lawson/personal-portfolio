@@ -58,7 +58,7 @@ const projects: Project[] = [
         liveUrl: 'timothylin.site',
         devpostUrl: '',
         imageUrl: '/projects/portfolio.jpg',
-        videoUrl: 'https://www.youtube.com/embed/R-QbORHD2Ps?si=EY43yB-CExVMDqZ3',
+        videoUrl: 'https://www.youtube.com/embed/5K68y1pTUFU?si=DebgvITy-S3hUWOk',
         category: 'fullstack',
     },
     {
