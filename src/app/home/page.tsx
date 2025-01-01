@@ -10,7 +10,7 @@ const projectsData = [
         title: "AI Integrated Finance Tracker",
         description:
             "A smart tool that leverages AI to monitor, analyze, and optimize your financial activities, providing personalized insights and real-time updates to keep your finances on track. ",
-        imageUrl: "/images/ai-chatbot.png",
+        imageUrl: "",
         videoUrl:'https://www.youtube.com/embed/gImQ5uFKIYo?si=K-RfFyzREASox7CT',
         githubUrl: "https://github.com/Deodat-Lawson/personalFinanceTrackFrontend",
         githubUrl2: "https://github.com/Deodat-Lawson/personalFinanceTrackBackend",
@@ -20,7 +20,7 @@ const projectsData = [
         title: "JHU Course Vote Social Media Platform",
         description:
             "A live rating/social platform for course discussions can greatly benefit your school community by making course selection more transparent, fostering meaningful peer interactions, and improving overall academic experiences.",
-        imageUrl: "/images/realtime-dashboard.png",
+        imageUrl: "",
         videoUrl:'https://www.youtube.com/embed/jZFcyiArpVI?si=ljYGqwvHG7-48lFF',
         githubUrl: "https://github.com/Deodat-Lawson/click_to_punch_nlp",
         githubUrl2: "",
@@ -28,8 +28,8 @@ const projectsData = [
     },
     {
         title: "Rome",
-        description: "Rome is an AI-powered platform that transforms brand identities into personalized, interactive video games, enabling deeper audience engagement and memorable digital experiences. By leveraging generative AI, it seamlessly integrates a brand’s essence into dynamic gameplay, offering creators, influencers, and companies a unique way to expand their digital presence and connect with their audience.",
-        imageUrl: "/images/ecommerce-platform.png",
+        description: "Rome is an AI-powered platform that transforms brand identities into personalized, interactive video games, enabling deeper audience engagement and memorable digital experiences. By leveraging generative AI, it seamlessly integrates a brand’s essence into dynamic gameplay.",
+        imageUrl: "",
         videoUrl:'https://www.youtube.com/embed/DhvwM8waTL0?si=VQNn-7eZgZOpdCTw',
         githubUrl: "https://github.com/ho-tony/rome-fe",
         githubUrl2: "https://github.com/klxu03/rome",

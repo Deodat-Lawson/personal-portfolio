@@ -1,0 +1,258 @@
+.container {
+    min-height: 100vh;
+    padding: 2rem;
+    padding-top: 5rem;
+    background: linear-gradient(135deg, #1a0f00, #000000);
+    color: white;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #FFD700, #FFA500, #FF4500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #FFE4B5;
+    font-size: 1.2rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 999px;
+}
+
+.timelineItem {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.right {
+    left: 50%;
+}
+
+.left {
+    left: 0;
+}
+
+.timelineItem::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.right::after {
+    left: -12px;
+}
+
+.left::after {
+    right: -13px;
+}
+
+.timelineContent {
+    padding: 2rem;
+    background: rgba(25, 25, 25, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timelineContent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.logoContainer {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.companyLogo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.defaultLogo {
+    width: 30px;
+    height: 30px;
+    color: #FFD700;
+}
+
+.companyHeader {
+    margin-bottom: 1rem;
+}
+
+.companyName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFD700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.companyLink {
+    color: #FFA500;
+    transition: color 0.3s ease;
+}
+
+.companyLink:hover {
+    color: #FFD700;
+}
+
+.position {
+    font-size: 1.2rem;
+    color: #FFE4B5;
+    font-weight: 500;
+}
+
+.metaInfo {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #FFE4B5;
+    font-size: 0.9rem;
+}
+
+.duration,
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.responsibilities {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.responsibilities li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #FFE4B5;
+    line-height: 1.6;
+}
+
+.responsibilities li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #FFA500;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech {
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timelineItem {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timelineItem.right {
+        left: 0;
+    }
+
+    .timelineItem.left::after,
+    .timelineItem.right::after {
+        left: 18px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .metaInfo {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .timelineContent {
+        padding: 1.5rem;
+    }
+
+    .companyName {
+        font-size: 1.25rem;
+    }
+
+    .position {
+        font-size: 1rem;
+    }
+}
