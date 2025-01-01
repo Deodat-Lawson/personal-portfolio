@@ -121,13 +121,24 @@
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
     border-color: rgba(255, 215, 0, 0.3);
 }
+.projectVideo {
+    position: relative;
+    /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    height: 0;
 
-.projectImage {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* Optional styling */
     border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* Make the <iframe> fill the parent container */
+.projectVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .projectContent {

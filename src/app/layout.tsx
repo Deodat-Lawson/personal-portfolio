@@ -7,7 +7,7 @@ import { Navbar } from "~/app/_component/Navbar";
 export const metadata: Metadata = {
   title: "Timothy's Portfolio",
   description: "Portfolio Website of Timothy Lin",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/logo.png" }],
 };
 
 export default function RootLayout({

@@ -11,6 +11,7 @@ const projectsData = [
         description:
             "A smart tool that leverages AI to monitor, analyze, and optimize your financial activities, providing personalized insights and real-time updates to keep your finances on track. ",
         imageUrl: "/images/ai-chatbot.png",
+        videoUrl:'https://www.youtube.com/embed/DhvwM8waTL0?si=VQNn-7eZgZOpdCTw',
         githubUrl: "https://github.com/Deodat-Lawson/personalFinanceTrackFrontend",
         githubUrl2: "https://github.com/Deodat-Lawson/personalFinanceTrackBackend",
         demoUrl: "",
@@ -20,6 +21,7 @@ const projectsData = [
         description:
             "A live rating/social platform for course discussions can greatly benefit your school community by making course selection more transparent, fostering meaningful peer interactions, and improving overall academic experiences.",
         imageUrl: "/images/realtime-dashboard.png",
+        videoUrl:'https://www.youtube.com/embed/DhvwM8waTL0?si=VQNn-7eZgZOpdCTw',
         githubUrl: "https://github.com/Deodat-Lawson/click_to_punch_nlp",
         githubUrl2: "",
         demoUrl: "https://www.jhucoursevote.online/",
@@ -28,6 +30,7 @@ const projectsData = [
         title: "Rome",
         description: "Rome is an AI-powered platform that transforms brand identities into personalized, interactive video games, enabling deeper audience engagement and memorable digital experiences. By leveraging generative AI, it seamlessly integrates a brand’s essence into dynamic gameplay, offering creators, influencers, and companies a unique way to expand their digital presence and connect with their audience.",
         imageUrl: "/images/ecommerce-platform.png",
+        videoUrl:'https://www.youtube.com/embed/DhvwM8waTL0?si=VQNn-7eZgZOpdCTw',
         githubUrl: "https://github.com/ho-tony/rome-fe",
         githubUrl2: "https://github.com/klxu03/rome",
         demoUrl: "https://devpost.com/software/rome",
@@ -71,10 +74,14 @@ export default function Portfolio() {
                 <div className={styles.projectsGrid}>
                     {projectsData.map((project, index) => (
                         <div key={index} className={styles.projectCard}>
-                            <div
-                                className={styles.projectImage}
-                                style={{ backgroundImage: `url(${project.imageUrl})` }}
-                            ></div>
+                            <div className={styles.projectVideo}>
+                                <iframe
+                                    src={project.videoUrl}
+                                    title={project.title}
+                                    frameBorder="0"
+                                    allowFullScreen
+                                />
+                            </div>
                             <div className={styles.projectContent}>
                                 <h3 className={styles.projectTitle}>{project.title}</h3>
                                 <p className={styles.projectDescription}>
