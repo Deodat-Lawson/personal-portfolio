@@ -40,7 +40,7 @@ const ContactPage = () => {
                         console.log('SUCCESS!');
                     },
                     (error) => {
-                        console.log('FAILED...', error.text);
+                        console.log('FAILED...', error);
                     },
                 );
 

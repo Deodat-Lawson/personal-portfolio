@@ -15,7 +15,7 @@ export default function LoadingScreen({ onFinish }: LoadingScreenProps) {
         // Fallback timer in case the video fails to load or is too long
         const fallbackTimer = setTimeout(() => {
             onFinish();
-        }, 6000); // 6 seconds maximum wait time
+        }, 3000); // Reduced to 3 seconds
 
         return () => clearTimeout(fallbackTimer);
     }, [onFinish]);
@@ -25,7 +25,7 @@ export default function LoadingScreen({ onFinish }: LoadingScreenProps) {
         if (videoElement) {
             // Add .fadeOut class to trigger CSS transitions
             videoElement.parentElement?.classList.add(styles.fadeOut);
-            setTimeout(() => onFinish(), 1000); // Wait for fade-out animation
+            setTimeout(() => onFinish(), 500); // Reduced fade-out delay to 0.5 seconds
         }
     };
 
@@ -37,7 +37,7 @@ export default function LoadingScreen({ onFinish }: LoadingScreenProps) {
         const videoElement = videoRef.current;
         if (videoElement) {
             videoElement.parentElement?.classList.add(styles.fadeOut);
-            setTimeout(() => onFinish(), 1000);
+            setTimeout(() => onFinish(), 500); // Reduced fade-out delay
         }
     };
 

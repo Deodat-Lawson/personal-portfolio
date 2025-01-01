@@ -208,6 +208,8 @@ export default function Portfolio() {
                         "Jenkins",
                         "JUnit",
                         "TestNG",
+                        "Clerk",
+                        "EmailJS",
                     ].map((skill) => (
                         <div key={skill} className={styles.skillItem}>
                             {skill}
