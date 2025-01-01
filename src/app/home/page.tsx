@@ -11,7 +11,7 @@ const projectsData = [
         description:
             "A smart tool that leverages AI to monitor, analyze, and optimize your financial activities, providing personalized insights and real-time updates to keep your finances on track. ",
         imageUrl: "/images/ai-chatbot.png",
-        videoUrl:'https://www.youtube.com/embed/DhvwM8waTL0?si=VQNn-7eZgZOpdCTw',
+        videoUrl:'https://www.youtube.com/embed/gImQ5uFKIYo?si=K-RfFyzREASox7CT',
         githubUrl: "https://github.com/Deodat-Lawson/personalFinanceTrackFrontend",
         githubUrl2: "https://github.com/Deodat-Lawson/personalFinanceTrackBackend",
         demoUrl: "",
@@ -21,7 +21,7 @@ const projectsData = [
         description:
             "A live rating/social platform for course discussions can greatly benefit your school community by making course selection more transparent, fostering meaningful peer interactions, and improving overall academic experiences.",
         imageUrl: "/images/realtime-dashboard.png",
-        videoUrl:'https://www.youtube.com/embed/DhvwM8waTL0?si=VQNn-7eZgZOpdCTw',
+        videoUrl:'https://www.youtube.com/embed/jZFcyiArpVI?si=ljYGqwvHG7-48lFF',
         githubUrl: "https://github.com/Deodat-Lawson/click_to_punch_nlp",
         githubUrl2: "",
         demoUrl: "https://www.jhucoursevote.online/",

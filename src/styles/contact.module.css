@@ -1,0 +1,227 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a0f00, #000000);
+    color: white;
+    padding: 2rem;
+    padding-top: 3rem;
+}
+
+.contentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #FFD700, #FFA500, #FF4500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #FFE4B5;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.infoCard {
+    background: rgba(25, 25, 25, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.infoIcon {
+    color: #FFD700;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.infoCard h3 {
+    color: #FFD700;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.infoCard p {
+    color: #FFE4B5;
+    line-height: 1.6;
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(25, 25, 25, 0.8);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 0.5rem;
+    color: #FFD700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(10px);
+}
+
+.contactForm {
+    background: rgba(25, 25, 25, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submitButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    border: none;
+    border-radius: 0.5rem;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submitIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.successMessage {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    border-radius: 0.5rem;
+    color: #90EE90;
+    text-align: center;
+}
+
+.errorMessage {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    color: #FFB6C1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contentWrapper {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .contactForm {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .socialLink span {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
