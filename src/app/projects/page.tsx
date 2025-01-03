@@ -185,7 +185,7 @@ const ProjectsPage = () => {
             <div className={styles.contentWrapper}>
                 <div className={styles.header}>
                     <h1 className={styles.title}>My Projects</h1>
-                    <p className={styles.subtitle}>Explore my journey through code and creativity</p>
+                    <p className={styles.subtitle}>Explore my journey through code and creativity (Page still working in progress...)</p>
                 </div>
 
                 <div className={styles.filters}>
