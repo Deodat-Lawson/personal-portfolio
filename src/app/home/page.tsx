@@ -7,14 +7,14 @@ import styles from "../../styles/home.module.css";
 
 const projectsData = [
     {
-        title: "AI Integrated Finance Tracker",
+        title: "PDR AI (Private Repo)",
         description:
-            "A smart tool that leverages AI to monitor, analyze, and optimize your financial activities, providing personalized insights and real-time updates to keep your finances on track. ",
+            "Professional Document Reader AI: Instantly analyze, interpret, and extract insights from professional documents using advanced AI technology. ",
         imageUrl: "",
-        videoUrl:'https://www.youtube.com/embed/gImQ5uFKIYo?si=K-RfFyzREASox7CT',
-        githubUrl: "https://github.com/Deodat-Lawson/personalFinanceTrackFrontend",
-        githubUrl2: "https://github.com/Deodat-Lawson/personalFinanceTrackBackend",
-        demoUrl: "",
+        videoUrl:'https://www.youtube.com/embed/YpLUDvotd24?si=4gKo0Oz0BFp1M115',
+        githubUrl: "https://github.com/Deodat-Lawson/pdr_ai_v2",
+        githubUrl2: "",
+        demoUrl: "https://www.pdrai.online",
     },
     {
         title: "JHU Course Vote Social Media Platform",
