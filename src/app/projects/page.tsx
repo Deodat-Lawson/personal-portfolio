@@ -35,6 +35,20 @@ const projects: Project[] = [
         videoUrl:'https://www.youtube.com/embed/YpLUDvotd24?si=4gKo0Oz0BFp1M115',
         category: 'fullstack',
     },
+
+    {
+        id: '6',
+        title: 'NORA AI (In Progress)',
+        description: 'New Outlooks, Real Achievements: Your journey to academic excellence starts here. Let us guide you to the university that best fits your aspirations.',
+        technologies: ['Next.js', 'PostgresSQL', 'Clerk', 'SAMMO Prompting', 'Chain Of Thought Prompting', 'ChatGPT API'],
+        githubUrl: 'https://github.com/Deodat-Lawson/the_most_promising_future_frontend',
+        githubUrl2: 'https://github.com/Deodat-Lawson/the_most_promising_future_backend',
+        liveUrl: 'https://www.nora-ai.online',
+        devpostUrl: '', // Example DevPost link
+        imageUrl: '',
+        videoUrl:'https://www.youtube.com/embed/ARltNfT2U24?si=TbicUOZHuYHI_mXj',
+        category: 'fullstack',
+    },
     {
         id: '1',
         title: 'JHU Course Vote Social Media Platform',
@@ -100,19 +114,7 @@ const projects: Project[] = [
         videoUrl:'https://www.youtube.com/embed/CPLWEESbnSg?si=OY428ZJQU4Wnytsd',
         category: 'mobile',
     },
-    {
-        id: '6',
-        title: 'NORA AI (In Progress)',
-        description: 'New Outlooks, Real Achievements: Your journey to academic excellence starts here. Let us guide you to the university that best fits your aspirations.',
-        technologies: ['Next.js', 'PostgresSQL', 'Clerk', 'SAMMO Prompting', 'Chain Of Thought Prompting', 'ChatGPT API'],
-        githubUrl: 'https://github.com/Deodat-Lawson/the_most_promising_future_frontend',
-        githubUrl2: 'https://github.com/Deodat-Lawson/the_most_promising_future_backend',
-        liveUrl: 'https://www.youtube.com/embed/ARltNfT2U24?si=TbicUOZHuYHI_mXj',
-        devpostUrl: '', // Example DevPost link
-        imageUrl: '',
-        videoUrl:'https://www.youtube.com/embed/K_LH228oarY?si=1XHSRtsLVTJZ8QWr',
-        category: 'fullstack',
-    },
+
     {
         id: '10',
         title: 'BodyFat Estimator',
