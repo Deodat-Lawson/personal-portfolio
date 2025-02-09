@@ -15,6 +15,48 @@ interface WorkExperience {
 
 const experiences: WorkExperience[] = [
     {
+        id: '5',
+        company: 'Alamma Health (Start Up)',
+        position: 'Software Engineering Intern',
+        location: 'Baltimore, MD, USA',
+        duration: 'Jan 2025 - Present',
+        description: [
+            'Currently Onboarding'
+        ],
+        technologies: ['LangChain'],
+        companyUrl: '',
+        logo: ''
+    },
+    {
+        id: '6',
+        company: 'Aireful (Start Up)',
+        position: 'Software Engineering Tech Lead',
+        location: 'Baltimore, MD, USA',
+        duration: 'Jan 2025 - Present',
+        description: [
+            'Developed a AI powered Chatbot Platform that integrate multiple LLMs (Gemini, ChatGPT, Deepseek, and Claude) models to provide a seamless experience for users',
+            'Lead a small team of 2-3 developers to build a scalable and secure infrastructure using Next.js, Prisma, Supabase and Vercel',
+        ],
+        technologies: ['Vercel', 'React', 'Next.js', 'Prisma', 'Supabase'],
+        companyUrl: 'https://aireful.vercel.app/',
+        logo: 'https://h0xotvuawi.ufs.sh/f/KSLubuOGoQY2QTeWKet9Utl6FkETmxeuvZC0YAg84VMB57c1'
+    },
+    {
+        id: '7',
+        company: 'Johns Hopkins University',
+        position: 'Algorithms Course Assistant',
+        location: 'Baltimore, MD, USA',
+        duration: 'Jan 2025 - Present',
+        description: [
+            'Guided students through complex algorithmic concepts, homework assignments, and projects during weekly office hours.',
+            'Led small-group review sessions, clarified problem sets, and proctored quizzes to reinforce key topics.',
+            'Collaborated with faculty and fellow course assistants to enhance course materials and ensure a smooth learning experience for students.',
+        ],
+        technologies: ['Min-Cut Max-Flow','Dynamic Programming', 'Graph Theory', 'Greedy Algorithms', 'Time Complexity', 'NP Completeness'],
+        companyUrl: 'https://www.jhu.edu/',
+        logo: 'https://h0xotvuawi.ufs.sh/f/KSLubuOGoQY2bwMRkW2r4k1ug2cIMO7AxhWZJm08SoX5VeYq'
+    },
+    {
         id: '1',
         company: 'Willis Towers Watson',
         position: 'Health and Benefits Data Engineer Intern',
