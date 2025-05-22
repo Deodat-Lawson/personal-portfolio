@@ -21,7 +21,31 @@ interface Project {
 }
 
 const projects: Project[] = [
-
+    {
+        id: '14',
+        title: 'Interview AI',
+        description: 'An AI-powered interview assistant that helps users prepare for interviews by providing personalized feedback and practice questions',
+        technologies: ['React.js','Vite', 'Flask', 'Supabase', 'OpenAI', 'LangChain', 'Text-to-Speech', 'Speech-to-Text', 'Whisper', 'Chain-of-Thought Prompting', 'Few-Shot Prompting', 'Playwright', 'Pytest'],
+        githubUrl: 'https://github.com/cs421sp25-homework/Interview-AI.git',
+        githubUrl2: '',
+        liveUrl: 'https://interviewai-hack.onrender.com',
+        devpostUrl: '',
+        imageUrl: '',
+        videoUrl:'https://www.youtube.com/embed/K_LH228oarY?si=1XHSRtsLVTJZ8QWr',
+        category: 'fullstack',
+    },{
+        id: '13',
+        title: 'Hopkins Marketplace (Private Repo)',
+        description: 'Johns Hopkins University Marketplace: A platform for students to buy and sell second-handed goods and services on campus',
+        technologies: ['Next.js','TypeScript', 'Drizzle', 'PostgreSQL', 'Clerk', 'SendGrid', 'Webhooks'],
+        githubUrl: '',
+        githubUrl2: '',
+        liveUrl: 'https://www.bluejaysmarket.org/',
+        devpostUrl: '',
+        imageUrl: '',
+        videoUrl:'https://www.youtube.com/embed/K_LH228oarY?si=1XHSRtsLVTJZ8QWr',
+        category: 'fullstack',
+    },
     {
         id: '12',
         title: 'PDR AI (Private Repo)',

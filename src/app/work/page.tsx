@@ -15,15 +15,30 @@ interface WorkExperience {
 
 const experiences: WorkExperience[] = [
     {
+        id: '8',
+        company: 'Roblox',
+        position: 'Software Engineering Intern',
+        location: 'San Mateo, CA, USA',
+        duration: 'May 2025 - Aug 2025',
+        description: [
+            'Enhanced Roblox Studio Engine UI by designing and implementing improvements to the 3D Character FaceAnimation interface, boosting usability and animation fidelity.',
+            'Currently undergoing onboarding: familiarizing with internal toolchains, codebase architecture, and team workflows to accelerate contribution.',
+        ],
+        technologies: ['Lua', 'Roblox Studio', 'C++'],
+        companyUrl: 'https://www.roblox.com/',
+        logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjY3NjMgMEwwIDQ0LjE2NTlMNDMuNTc3MSA1Nkw1NS4yNTMzIDExLjgzNDFMMTEuNjc2MyAwWk0zMi4wODQ5IDM1LjgyN0wxOS45MDc5IDMyLjUxODVMMjMuMTcyMyAyMC4xNzY5TDM1LjM1NDIgMjMuNDg1NUwzMi4wODQ5IDM1LjgyN1oiIGZpbGw9IiMzOTNCM0QiLz4KPC9zdmc+Cg=='
+    },
+    {
         id: '5',
         company: 'Alamma Health (Start Up)',
         position: 'Software Engineering Intern',
         location: 'Baltimore, MD, USA',
         duration: 'Jan 2025 - Present',
         description: [
-            'Currently Onboarding'
+            'Developing Langchain Agents and Tools to gather CO2 emissions data from a user-specified food menu',
+            'Design and Implemented fully working React Native app with Expo Go',
         ],
-        technologies: ['LangChain'],
+        technologies: ['LangChain', 'React Native'],
         companyUrl: '',
         logo: ''
     },
