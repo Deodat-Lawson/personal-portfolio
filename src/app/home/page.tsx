@@ -7,9 +7,9 @@ import styles from "../../styles/home.module.css";
 
 const projectsData = [
     {
-        title: "PDR AI (Private Repo)",
+        title: "PDR AI (500+ Stars on GitHub)",
         description:
-            "Professional Document Reader AI: Instantly analyze, interpret, and extract insights from professional documents using advanced AI technology. ",
+            "Open Source Gen AI long document analyzer with LangChain and Pinecone Vector DB supporting analysis of 1000+ page contents. Adopted by 50+ companies, cutting analysis time by ~70%.",
         imageUrl: "",
         videoUrl:'https://www.youtube.com/embed/YpLUDvotd24?si=4gKo0Oz0BFp1M115',
         githubUrl: "https://github.com/Deodat-Lawson/pdr_ai_v2",
@@ -46,14 +46,11 @@ export default function Portfolio() {
             <section className={styles.heroSection}>
                 <div className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>Timothy Lin</h1>
-                    <p className={styles.heroSubtitle}>3rd Yr @ Johns Hopkins University</p>
+                    <p className={styles.heroSubtitle}>4th Yr @ Johns Hopkins University </p>
                     <p className={styles.heroDescription}>
-                        A software engineer who has a fascination with emerging
-                        technologies and passion for pushing the boundaries of what’s
-                        possible. I transform forward-thinking ideas into real-world
-                        applications and tackle complex problems—especially those that sit
-                        at the intersection of deep tech research and impactful business
-                        opportunities.
+                        A software engineer with a fascination for emerging technologies and a passion for pushing the boundaries of what's
+                        possible. I transform forward-thinking ideas into real-world applications and tackle complex problems—especially those that sit
+                        at the intersection of deep tech research and impactful business opportunities. Currently pursuing B.S in Computer Science & B.S in Applied Mathematics and Statistics.
                     </p>
                     <div className={styles.buttonGroup}>
                         <a href="#projects" className={styles.primaryButton}>
@@ -141,15 +138,17 @@ export default function Portfolio() {
                 <h3 className={styles.sectionSubtitle}>Programming Languages</h3>
                 <div className={styles.skillsGrid}>
                     {[
-                        "Java",
-                        "JavaScript",
-                        "SQL",
-                        "Python",
-                        "C",
-                        "C++",
-                        "Bash",
-                        "React",
                         "TypeScript",
+                        "JavaScript", 
+                        "Python",
+                        "Java",
+                        "SQL",
+                        "C++",
+                        "C#",
+                        "Bash",
+                        "Lua",
+                        "HTML",
+                        "CSS",
                     ].map((skill) => (
                         <div key={skill} className={styles.skillItem}>
                             {skill}
@@ -160,25 +159,27 @@ export default function Portfolio() {
                 <h3 className={styles.sectionSubtitle}>Framework & Technologies:</h3>
                 <div className={styles.skillsGrid}>
                     {[
-                        "Spring Boot",
-                        "Next.js",
-                        "Django",
                         "React",
+                        "Next.js",
                         "Express.js",
-                        "MySQL",
-                        "Postgres SQL",
-                        "Kafka",
-                        "Redis",
-                        "Node.js",
-                        "AWS",
-                        "Azure",
-                        "Google Cloud",
+                        "PyTorch",
+                        "Hugging Face",
+                        "Pandas",
                         "Numpy",
-                        "Pytorch",
-                        "Scikit-learn",
+                        "Spring Boot",
+                        "Django",
                         "Flask",
-                        "Tensorflow",
-                        "Pandas"
+                        "LangGraph",
+                        "RAG",
+                        "Redis",
+                        "PostgreSQL",
+                        "MySQL",
+                        "MongoDB",
+                        "Pinecone",
+                        "ElasticSearch",
+                        "InfluxDB",
+                        "Kafka",
+                        "AirFlow"
                     ].map((skill) => (
                         <div key={skill} className={styles.skillItem}>
                             {skill}
@@ -190,24 +191,24 @@ export default function Portfolio() {
                 <h3 className={styles.sectionSubtitle}>Development Tools:</h3>
                 <div className={styles.skillsGrid}>
                     {[
+                        "Kubernetes",
+                        "Docker",
                         "Git",
-                        "GitHub",
-                        "Unix",
-                        "Vim",
+                        "Cursor",
+                        "Windsurf",
+                        "Figma",
+                        "AWS ECS",
+                        "AWS Fargate",
+                        "AWS API Gateway",
+                        "AWS VectorDB",
+                        "AWS Bedrock",
+                        "AWS Sagemaker",
                         "Vercel",
                         "NPM",
                         "PNPM",
                         "Jupyter Notebook",
-                        "Google Collab",
-                        "Intellij IDEA",
-                        "Webstorm",
-                        "Pytorch",
-                        "Clion",
-                        "Maven",
                         "Postman",
                         "Jenkins",
-                        "JUnit",
-                        "TestNG",
                         "Clerk",
                         "EmailJS",
                     ].map((skill) => (

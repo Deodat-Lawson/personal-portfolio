@@ -17,16 +17,39 @@ const experiences: WorkExperience[] = [
     {
         id: '8',
         company: 'Roblox',
-        position: 'Software Engineering Intern',
+        position: 'Software Engineer Intern + Engineer Campus Ambassador',
         location: 'San Mateo, CA, USA',
         duration: 'May 2025 - Aug 2025',
         description: [
-            'Enhanced Roblox Studio Engine UI by designing and implementing improvements to the 3D Character FaceAnimation interface, boosting usability and animation fidelity.',
-            'Currently undergoing onboarding: familiarizing with internal toolchains, codebase architecture, and team workflows to accelerate contribution.',
+            'Developed an Interactive 3D Rig Facial Control Editor desktop application with Roblox Studio. Provide intuitive real-time rendering, and a combination of parameterized and drag-and-drop facial animation editing for 10M+ global creators.',
+            'Developed specialized visualization, 3D graphic and animation rendering, and editor control UX components. Established a reusable component library and published across Roblox Studio organization. Reduced duplicated UX effort by 12%.',
+            'Proposed a keyframe caching and optimization algorithm in the core Roblox animation engine. Improved framerate by ~50%.',
+            'Developed a real-time data synchronisation pipeline to support interoperability between new React-lua based rendering component and legacy C++ Roblox game engine based editing component. Reduced legacy complement latency by up to 80%',
+            'Defined a canonical data model, interface and event bus to standardize user editing actions. Improved conflict resolution and editing responseness with event-sourcing and operational transformation for undo, redo, and collaborative editing.',
+            'Evangelized GenAI adoption for coding productivity, developed tools and prompts to analyze codebase, automate testing and CR.'
         ],
-        technologies: ['Lua', 'Roblox Studio', 'C++'],
+        technologies: ['C++', 'Lua', 'React-lua', 'Cursor', '3D Graphics'],
         companyUrl: 'https://www.roblox.com/',
         logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjY3NjMgMEwwIDQ0LjE2NTlMNDMuNTc3MSA1Nkw1NS4yNTMzIDExLjgzNDFMMTEuNjc2MyAwWk0zMi4wODQ5IDM1LjgyN0wxOS45MDc5IDMyLjUxODVMMjMuMTcyMyAyMC4xNzY5TDM1LjM1NDIgMjMuNDg1NUwzMi4wODQ5IDM1LjgyN1oiIGZpbGw9IiMzOTNCM0QiLz4KPC9zdmc+Cg=='
+    },
+    {
+        id: '9',
+        company: 'NextTier',
+        position: 'Software Engineer Technology Intern',
+        location: 'Sacramento, CA, USA',
+        duration: 'Jan 2025 - May 2025',
+        description: [
+            'Developed a quantitative and fundamentals analysis data pipeline and Gen AI advisor agent for cryptocurrency traders',
+            'Implemented a near real-time data pipeline to ingest multi-format, mixed structured and unstructured data from more than 100+ exchanges and 12+ data sources. Implemented configurable and extensible orchestration with AirFlow.',
+            'Developed data sanitization, standardization, aggregation and analytical business logic as a set of composable stages.',
+            'Implemented a multi-agent summarization and advisor copilot with specialized agents for data interpretation, report generation, debate-based reasoning to generate balanced and objective advice using available analytics data and documents.',
+            'Developed context engineering and knowledge retrieval capability. Optimized a natural language to the InfluxDB query generation model for qualitative analysis. Deployed semantic search with Pinecone for unstructured document knowledge.',
+            'Proposed implemented context-aware UX layout engine to dynamically compose common reporting and dashboard widget based on user profile, current task, and data being analyzed or queried. Reduced UX complexity and user fatigue.',
+            'Deployed CI/CD pipeline and configured infrastructure and deployment using K8s to orchestrate a containerized fleet.'
+        ],
+        technologies: ['Java', 'Spring Boot', 'Python', 'Kafka', 'Redis', 'InfluxDB', 'AWS', 'Pinecone', 'LangGraph', 'API Gateway', 'ECS', 'Bedrock'],
+        companyUrl: 'https://www.nexttier.com/',
+        logo: ''
     },
     {
         id: '5',
@@ -44,15 +67,17 @@ const experiences: WorkExperience[] = [
     },
     {
         id: '6',
-        company: 'Aireful (Start Up)',
-        position: 'Software Engineering Tech Lead',
+        company: 'Aireful (Startup)',
+        position: 'Cofounder and Software Engineer Lead',
         location: 'Baltimore, MD, USA',
         duration: 'Jan 2025 - Present',
         description: [
-            'Developed a AI powered Chatbot Platform that integrate multiple LLMs (Gemini, ChatGPT, Deepseek, and Claude) models to provide a seamless experience for users',
-            'Lead a small team of 2-3 developers to build a scalable and secure infrastructure using Next.js, Prisma, Supabase and Vercel',
+            'Implemented a bi-directional text-to-speech and text-to-SQL natural language querying against any Redis and Supabase instance.',
+            'Developed intelligent semantics and schema analysis and extraction logic, user intent interpretation, and query generation.',
+            'Integrated Adobe Acrobat and Bright Data APIs with an AI agent to automate document fill-out workflows.',
+            'Optimized prompt engineering using SAMMO to improve relevance, improved user positive feedback rate from 56% to 72%.'
         ],
-        technologies: ['Vercel', 'React', 'Next.js', 'Prisma', 'Supabase'],
+        technologies: ['Python', 'Pinecone', 'SAMMO', 'Chain of Thought', 'ANN Algorithm (HNSW/IVF/LSH)', 'PEFT (LoRA, QLoRA)'],
         companyUrl: 'https://aireful.vercel.app/',
         logo: 'https://h0xotvuawi.ufs.sh/f/KSLubuOGoQY2QTeWKet9Utl6FkETmxeuvZC0YAg84VMB57c1'
     },

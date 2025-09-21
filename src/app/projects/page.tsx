@@ -48,9 +48,9 @@ const projects: Project[] = [
     },
     {
         id: '12',
-        title: 'PDR AI (Private Repo)',
-        description: 'Professional Document Reader AI: Instantly analyze, interpret, and extract insights from professional documents using advanced AI technology',
-        technologies: ['Next.js','TypeScript', 'Drizzle', 'PostgreSQL', 'Clerk', 'LangChain', 'OpenAI'],
+        title: 'PDR AI (500+ Stars on GitHub)',
+        description: 'Open Source Gen AI long document analyzer with LangChain and Pinecone Vector DB supporting analysis of 1000+ page contents. Researched and implemented ANN algorithms. Integrated with Clerk for secure uploads, adopted by 50+ companies, cutting analysis time by ~70%.',
+        technologies: ['LangChain', 'Pinecone Vector DB', 'ANN algorithms', 'Clerk', 'Next.js','TypeScript', 'Drizzle', 'PostgreSQL', 'OpenAI'],
         githubUrl: 'https://github.com/Deodat-Lawson/pdr_ai_v2',
         githubUrl2: '',
         liveUrl: 'https://www.pdrai.online',
