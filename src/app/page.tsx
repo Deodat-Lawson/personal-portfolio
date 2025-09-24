@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import LoadingScreen from "./Loading";
-import Portfolio from "./Portfolio";
 import { useRouter } from "next/navigation";
 
 export default function HomePage() {

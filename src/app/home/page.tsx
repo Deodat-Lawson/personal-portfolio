@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Code, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
-import { Navbar } from "~/app/_component/Navbar";
+// import { Navbar } from "~/app/_component/Navbar";
 import styles from "../../styles/home.module.css";
 
 const projectsData = [
@@ -48,7 +48,7 @@ export default function Portfolio() {
                     <h1 className={styles.heroTitle}>Timothy Lin</h1>
                     <p className={styles.heroSubtitle}>4th Yr @ Johns Hopkins University </p>
                     <p className={styles.heroDescription}>
-                        A software engineer with a fascination for emerging technologies and a passion for pushing the boundaries of what's
+                        A software engineer with a fascination for emerging technologies and a passion for pushing the boundaries of what&apos;s
                         possible. I transform forward-thinking ideas into real-world applications and tackle complex problems—especially those that sit
                         at the intersection of deep tech research and impactful business opportunities. Currently pursuing B.S in Computer Science & B.S in Applied Mathematics and Statistics.
                     </p>

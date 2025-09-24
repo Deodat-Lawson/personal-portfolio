@@ -1,5 +1,6 @@
 import { Briefcase, Calendar, MapPin, ExternalLink } from 'lucide-react';
 import styles from '../../styles/work.module.css';
+import Image from 'next/image';
 
 interface WorkExperience {
     id: string;
@@ -188,7 +189,7 @@ const ExperiencePage = () => {
                         <div className={styles.timelineContent}>
                             <div className={styles.logoContainer}>
                                 {exp.logo ? (
-                                    <img
+                                    <Image
                                         src={exp.logo}
                                         alt={`${exp.company} logo`}
                                         className={styles.companyLogo}

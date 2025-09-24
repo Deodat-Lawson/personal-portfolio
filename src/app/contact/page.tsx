@@ -1,5 +1,5 @@
 "use client"
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { Mail, Github, Linkedin, Send, MessageSquare } from 'lucide-react';
 import styles from '../../styles/contact.module.css';
 import emailjs from '@emailjs/browser';
@@ -47,6 +47,7 @@ const ContactPage = () => {
             setSubmitStatus('success');
             setFormData({ from_name: '', from_email: '', to_name: '', subject: '', message: '' });
         } catch (error) {
+            console.error('Error submitting form:', error);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);
